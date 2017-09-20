@@ -1,0 +1,56 @@
+$color_fg: #000;
+$color_bg: #fff;
+$color_border: #ddd;
+
+@import 'reset';
+
+body {
+	color: $color_fg;
+	background-color: $color_bg;
+}
+
+.page {
+	margin: 0 auto;
+	max-width: 900px;
+}
+
+dt {
+	font-weight: bold;
+
+	+ dd {
+		margin-bottom: 5px;
+	}
+}
+
+dd {
+	margin-left: 15px;
+}
+
+section {
+	border: 1px solid $color_border;
+	border-radius: 3px;
+	box-shadow: 3px 3px 2px lighten($color_border, 10%);
+
+	> h1 {
+		background-color: lighten($color_border, 10%);
+		border-bottom: 1px solid $color_border;
+		margin: 0;
+		padding: 7px;
+		text-align: center;
+		font-size: 120%;
+		font-weight: bold;
+	}
+
+	> .content {
+		margin: 10px;
+	}
+}
+
+.sidebar {
+	float: right;
+	width: 400px;
+
+	> section {
+		margin: 7px 0;
+	}
+}
