@@ -1,0 +1,25 @@
+@media (max-width: #{$page_width + 50}) {
+	.page {
+		width: 97%;
+	}
+
+	main, .sidebar {
+		width: 100%;
+		float: none;
+	}
+
+	nav.menu {
+		ul {
+			width: 100%;
+		}
+
+		a {
+			padding: 20px;
+			font-size: 22px;
+		}
+	}
+
+	.highlight {
+		display: inline-block;
+	}
+}
