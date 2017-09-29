@@ -1,8 +1,57 @@
 $color_fg: #000;
 $color_bg: #fff;
 $color_border: #ddd;
+$page_width: 900px;
+$section_spacing: 7px;
 
 @import 'reset';
+
+h2 {
+	font-size: 27px;
+	margin-top: 25px;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid $color_border;
+}
+
+p {
+	margin: 15px 0;
+	font-size: 16px;
+	line-height: 27px;
+}
+
+ul {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 15px;
+	list-style-type: "- ";
+	list-style-position: outside;
+
+	ul {
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-left: 25px;
+	}
+}
+
+li {
+	margin: 7px 0;
+}
+
+a {
+	color: #33f;
+	transition: color 0.5s;
+	text-decoration: none;
+
+	&:visited {
+		color: #aaa;
+	}
+
+	&:hover {
+		color: #00f;
+		text-decoration: underline;
+	}
+}
 
 body {
 	color: $color_fg;
@@ -10,8 +59,8 @@ body {
 }
 
 .page {
+	width: $page_width;
 	margin: 0 auto;
-	max-width: 900px;
 }
 
 dt {
@@ -26,31 +75,55 @@ dd {
 	margin-left: 15px;
 }
 
-section {
+.sidebar {
+	float: right;
+	width: #{$page_width * 0.3};
+
+	aside {
+		margin: $section_spacing 0;
+	}
+}
+
+main, aside {
 	border: 1px solid $color_border;
 	border-radius: 3px;
 	box-shadow: 3px 3px 2px lighten($color_border, 10%);
 
-	> h1 {
+	h1 {
 		background-color: lighten($color_border, 10%);
 		border-bottom: 1px solid $color_border;
 		margin: 0;
 		padding: 7px;
 		text-align: center;
-		font-size: 120%;
+		font-size: 20px;
 		font-weight: bold;
 	}
 
-	> .content {
+	.content {
 		margin: 10px;
 	}
 }
 
-.sidebar {
-	float: right;
-	width: 400px;
+main {
+	width: #{$page_width * 0.7 - 7px};
+	float: left;
+	margin-top: 7px;
+}
 
-	> section {
-		margin: 7px 0;
+code {
+	background-color: darken($color_bg, 5%);
+}
+
+.highlight {
+	border: 1px solid $color_border;
+	overflow-x: hidden;
+	z-index: 99999999;
+	position: relative;
+	padding: 5px;
+
+	&:hover {
+		display: inline-block;
 	}
 }
+
+@import 'menu';

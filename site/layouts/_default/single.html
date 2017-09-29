@@ -1,14 +1,25 @@
+{{ $currentPage := . }}
 <!DOCTYPE html>
 <html lang="de-DE">
 	<head>
 		<meta charset="utf-8">
-		<title>Thomas Heck</title>
+		<title>Thomas Heck | {{.Title}}</title>
 		<link rel="stylesheet" href="{{"/style.css" | relURL}} ">
+		<meta name="generator" content="gohugo">
 	</head>
 	<body>
+		<nav class="menu">
+			<ul>{{range .Site.Menus.main}}<li class="{{if $currentPage.IsMenuCurrent "main" .}}current{{end}}"><a href="{{.URL}}">{{.Name}}</a></li>{{end}}</ul>
+		</nav>
+
 		<div class="page">
+			<main>
+				<h1>{{.Title}}</h1>
+				<div class="content">{{.Content}}</div>
+			</main>
+
 			<div class="sidebar">
-				<section>
+				<aside>
 					<h1>Persönliche Daten</h1>
 					<div class="content">
 						<dl>
@@ -28,11 +39,7 @@
 							<dd>26.09.1990 in Litauen/Kaunas</dd>
 						</dl>
 					</div>
-				</section>
-
-				<section>
-					<h1>Kenntnisse und Fähigkeiten</h1>
-				</section>
+				</aside>
 			</div>
 		</div>
 

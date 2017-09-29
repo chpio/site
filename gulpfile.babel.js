@@ -9,7 +9,9 @@ const $ = lazyReq(require, {
 	newer: 'gulp-newer',
 	autoprefixer: 'gulp-autoprefixer',
 	del: 'del',
-	exec: ['child_process', 'exec'],
+	promisify: ['util', 'promisify'],
+	exec: ['child_process', 'exec', (e) => $.promisify(e)],
+	noop: ['gulp-util', 'noop'],
 });
 
 gulp.task('default', ['style', 'site']);
@@ -17,23 +19,31 @@ gulp.task('default', ['style', 'site']);
 gulp.task('style', () =>
 	gulp.src('./style/style.scss')
 	 	.pipe($.newer({
-			dest: './public/style.css',
+			dest: './target/style.css',
 			extra: './style/*',
 		}))
 		.pipe($.sourcemaps.init())
 		.pipe($.sass({
 			outputStyle: is_dev ? 'nested' : 'compressed',
 		}))
-		.pipe($.autoprefixer())
+		.pipe(is_dev ? $.noop() : $.autoprefixer())
 		.pipe($.sourcemaps.write('./'))
-		.pipe(gulp.dest('./public'))
+		.pipe(gulp.dest('./target'))
 );
 
-
 gulp.task('site', () =>
-	$.exec('hugo')
+	$.exec('hugo --source ./site')
+		.catch(e => {
+			console.log(e.stdout);
+			throw e;
+		})
 );
 
 gulp.task('clean', () =>
-	$.del('./public')
+	$.del('./target')
 );
+
+gulp.task('watch', () => {
+  gulp.watch(['./style/**'], ['style']);
+  gulp.watch(['./site/**'], ['site']);
+});

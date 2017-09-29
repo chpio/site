@@ -1,0 +1,9 @@
+relativeURLs = true
+uglyURLs = true
+disableKinds = ["RSS", "sitemap"]
+publishDir = "../target"
+pygmentsCodefences = true
+pygmentsStyle = "trac"
+
+[blackfriday]
+extensionsmask = ["noIntraEmphasis"]

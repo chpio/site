@@ -1,0 +1,30 @@
+nav.menu {
+	border-bottom: 1px solid #ddd;
+
+	ul {
+		margin: 0 auto;
+		width: $page_width;
+	}
+
+	li {
+		display: inline-flex;
+
+		+ li {
+			// border-left: 1px solid #ddd;
+		}
+
+		a {
+			font-family: "DejaVu Sans Mono", monospace;
+			padding: 12px;
+			font-size: 16px;
+			text-decoration: none;
+			text-transform: lowercase;
+		}
+
+		&.current a,
+		a:hover {
+			color: #00f;
+			text-decoration: underline;
+		}
+	}
+}
