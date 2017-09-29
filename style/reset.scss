@@ -122,3 +122,11 @@ button, input, select, textarea {margin: 0;}
 /* make buttons play nice in IE */
 button,
 input[type=button] {width: auto; overflow: visible;}
+
+
+/* let's clear some floats */
+.clearfix:after {
+	content: " ";
+	display: block;
+	clear: both;
+}

@@ -1,6 +1,4 @@
-nav.menu {
-	border-bottom: 1px solid #ddd;
-
+nav.main, nav.footer {
 	ul {
 		margin: 0 auto;
 		width: $page_width;
@@ -9,8 +7,10 @@ nav.menu {
 	li {
 		display: inline-flex;
 
-		+ li {
-			// border-left: 1px solid #ddd;
+		&.current a,
+		a:hover {
+			color: #00f;
+			text-decoration: underline;
 		}
 	}
 
@@ -21,10 +21,12 @@ nav.menu {
 		text-decoration: none;
 		text-transform: lowercase;
 	}
+}
 
-	&.current a,
-	a:hover {
-		color: #00f;
-		text-decoration: underline;
-	}
+nav.main {
+	border-bottom: 1px solid #ddd;
+}
+
+nav.footer {
+	border-top: 1px solid #ddd;
 }

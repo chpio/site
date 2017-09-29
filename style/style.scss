@@ -61,6 +61,7 @@ body {
 .page {
 	width: $page_width;
 	margin: 0 auto;
+	@extend .clearfix;
 }
 
 dt {
@@ -88,6 +89,8 @@ main, aside {
 	border: 1px solid $color_border;
 	border-radius: 3px;
 	box-shadow: 3px 3px 2px lighten($color_border, 10%);
+	margin-top: 7px;
+	margin-bottom: 7px;
 
 	h1 {
 		background-color: lighten($color_border, 10%);
@@ -107,7 +110,6 @@ main, aside {
 main {
 	width: #{$page_width * 0.7 - 7px};
 	float: left;
-	margin-top: 7px;
 }
 
 code {
@@ -126,5 +128,5 @@ code {
 	}
 }
 
-@import 'menu';
+@import 'nav';
 @import 'mobile';

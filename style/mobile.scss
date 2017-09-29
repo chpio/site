@@ -8,14 +8,14 @@
 		float: none;
 	}
 
-	nav.menu {
+	nav.main, nav.footer {
 		ul {
 			width: 100%;
 		}
 
-		a {
+		li a {
 			padding: 20px;
-			font-size: 22px;
+			font-size: 18px;
 		}
 	}
 

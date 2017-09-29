@@ -9,7 +9,7 @@
 		<meta name="generator" content="gohugo">
 	</head>
 	<body>
-		<nav class="menu">
+		<nav class="main">
 			<ul>{{range .Site.Menus.main}}<li class="{{if $currentPage.IsMenuCurrent "main" .}}current{{end}}"><a href="{{.URL}}">{{.Name}}</a></li>{{end}}</ul>
 		</nav>
 
@@ -43,6 +43,10 @@
 				</aside>
 			</div>
 		</div>
+
+		<nav class="footer">
+			<ul>{{range .Site.Menus.footer}}<li class="{{if $currentPage.IsMenuCurrent "footer" .}}current{{end}}"><a href="{{.URL}}">{{.Name}}</a></li>{{end}}</ul>
+		</nav>
 
 	</body>
 </html>
