@@ -11,15 +11,15 @@ weight: 9999
 	- Gestaltung und Umsetzung von Webseiten
 	- Serverseitiger Einsatz von *Javascript*, *PHP* und *MySQL*
 	- und weiteren Webtechniken im Web-Browser
-
-## Ausbildung
-
-- Studium Informatik (10.2015 - 09.2016)
-	- bei TU Braunschweig
 - Ausbildung zum *Fachinformatiker mit Fachrichtung Anwendungsentwicklung* (08.2011 - 06.2014)
 	- bei [*LINET Services GmbH*](https://www.linet-services.de/)
 	- Erwerb der Hochschulreife (praktischer Teil)
 	- Hauptsächlich: Einsatz von *Perl* und *HTML*
+
+## Schulbildung
+
+- Studium Informatik (10.2015 - 09.2016)
+	- bei TU Braunschweig
 - Schulische Ausbildung zum *technischen Assistenten für Informatik* (2009 - 2011)
 	- an der Heinrich-Büssing-Schule in Braunschweig
 	- Erwerb der Hochschulreife (schulischer Teil)
