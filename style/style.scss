@@ -112,16 +112,17 @@ main {
 	float: left;
 }
 
-code {
-	background-color: darken($color_bg, 5%);
-}
-
 .highlight {
 	border: 1px solid $color_border;
 	overflow-x: hidden;
 	z-index: 99999999;
 	position: relative;
 	padding: 5px;
+	background-color: darken($color_bg, 5%);
+
+	code, pre {
+		background-color: inherit !important;
+	}
 
 	&:hover {
 		display: inline-block;
