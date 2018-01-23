@@ -1,7 +1,8 @@
 ---
 title: Über mich
-menu: main
-weight: 9999
+menu:
+  main:
+    weight: 9999
 ---
 
 ## Berufserfahrungen

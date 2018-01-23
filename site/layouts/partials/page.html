@@ -1,0 +1,52 @@
+{{ $currentPage := . }}
+<!DOCTYPE html>
+<html lang="de-DE">
+	<head>
+		<meta charset="utf-8">
+		<title>Thomas Heck | {{.Title}}</title>
+		<link rel="stylesheet" href="{{"/style.css" | relURL}} ">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="gohugo">
+	</head>
+	<body>
+		<nav class="main">
+			<ul>{{range .Site.Menus.main}}<li class="{{if $currentPage.IsMenuCurrent "main" .}}current{{end}}"><a href="{{.URL}}">{{.Name}}</a></li>{{end}}</ul>
+		</nav>
+
+		<div class="page">
+			<main>
+				<h1>{{.Title}}</h1>
+				<div class="content">{{.Content}}</div>
+			</main>
+
+			<div class="sidebar">
+				<aside>
+					<h1>Persönliche Daten</h1>
+					<div class="content">
+						<dl>
+							<dt>Name</dt>
+							<dd>Thomas Heck</dd>
+
+							<dt>Anschrift</dt>
+							<dd>
+								An den Schanzen 13<br />
+								31224 Peine
+							</dd>
+
+							<dt>E-Mail</dt>
+							<dd><a href="mailto:t@b128.net">t@b128.net</a></dd>
+
+							<dt>Geboren</dt>
+							<dd>26.09.1990 in Litauen/Kaunas</dd>
+						</dl>
+					</div>
+				</aside>
+			</div>
+		</div>
+
+		<nav class="footer">
+			<ul>{{range .Site.Menus.footer}}<li class="{{if $currentPage.IsMenuCurrent "footer" .}}current{{end}}"><a href="{{.URL}}">{{.Name}}</a></li>{{end}}</ul>
+		</nav>
+
+	</body>
+</html>
