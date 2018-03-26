@@ -3,10 +3,6 @@ title: Projekte
 menu: main
 ---
 
-## [WIP] [vtree-rs](https://github.com/vtree-rs/vtree/tree/develop)
-Implementerung eines virtuellen *DOM*s in [*Rust*](https://www.rust-lang.org/), vergleichbar mit
-[*React*](https://facebook.github.io/react/).
-
 ## [Babel: promise-to-bluebird](https://www.npmjs.com/package/babel-plugin-transform-promise-to-bluebird)
 [*Babel*](https://babeljs.io/)-Plugin. Wandelt `Promise` nach
 [*Bluebird*](http://bluebirdjs.com/) um.
@@ -39,5 +35,9 @@ export default function main() {
 [*Babel*](https://babeljs.io/)-Plugin. Wandelt `async`-Funktionen nach
 [*Bluebird*](http://bluebirdjs.com/)s [`method`](http://bluebirdjs.com/docs/api/promise.method.html)
 oder [`coroutine`](http://bluebirdjs.com/docs/api/promise.coroutine.html) um. Der Vorteil hierbei
-ist, dass Code, der kein `await` enthält, keinen *generator* erzeugt aber trotzdem bei einem *throw*
+ist, dass Code, der kein `await` enthält, keinen *generator* erzeugt, aber trotzdem bei einem *throw*
 oder *return* ein `Promise`-Objekt zurückgibt.
+
+## [WIP] [vdom-rs](https://github.com/vdom-rs/vdom-rs)
+Implementerung eines virtuellen *DOM*s in [*Rust*](https://www.rust-lang.org/), vergleichbar mit
+[*React*](https://facebook.github.io/react/).
