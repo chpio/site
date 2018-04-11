@@ -2,3 +2,4 @@
 /package-lock.json
 /target/**/*
 !/target/pubkey.asc
+!/target/.htaccess
